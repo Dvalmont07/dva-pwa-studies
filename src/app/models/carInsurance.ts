@@ -1,8 +1,8 @@
 import { CarBrand } from "./carBrand";
 
-export interface CarInsurance{
-    carBrand:CarBrand;
-    carModel:string;
-    ownerName:string;
-    carPlate:string;
+export class CarInsurance {
+carBrand: CarBrand = new CarBrand();
+carModel: string = "";
+ownerName: string = "";
+carPlate: string = "";
 }

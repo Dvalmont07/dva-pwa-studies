@@ -13,21 +13,12 @@ export class RegisterComponent implements OnInit {
 
   constructor(private carBrandService: CarBrandService) { }
 
-  public insurance: CarInsurance = {
-    carBrand: {
-      code: "",
-      name: ""
-    },
-    carModel: "",
-    carPlate: "",
-    ownerName: ""
-  };
-  public marcasCarro$: Observable<CarBrand[]> | undefined;
+  public insurance: CarInsurance  = new CarInsurance();
+  public marcasCarro: CarBrand[] | undefined;
   ngOnInit(): void {
-    this.marcasCarro$ = this.carBrandService.getBrands();
+    this.marcasCarro = this.carBrandService.getBrands();
   }
 
   public adicionar() { }
   public enviarNotificacao() { }
-
 }
