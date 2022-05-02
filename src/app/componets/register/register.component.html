@@ -1,53 +1,59 @@
 <div class="ui card main-form">
   <div class="content">
-    <h1 class="header">Cadastrar insurance</h1>
+    <h1 class="header">Register insurance</h1>
   </div>
   <div class="content">
     <div class="ui large form equal width stackable grid">
 
       <!-- DADOS DO CARRO -->
-      <h3 class="title">Dados do Carro</h3>
+      <h3 class="title">Car data</h3> 
 
       <div class="three column row">
 
         <div class="column field">
-          <label for="carroModel">Marca</label>
-          <select title="search" class="ui fluid search selection dropdown" [(ngModel)]="insurance.carBrand.name">
-            <option *ngFor="let brand of marcasCarro" class="item" [value]="brand.name">{{brand.name }} </option>
+          <label for="carroModel">Brand</label>
+          <select *ngIf="carsBrands.length > 0; else loadingDrop" title="search"
+            class="ui fluid search selection dropdown" [(ngModel)]="insurance.carBrand.name">
+            <option *ngFor="let brand of carsBrands" class="item" [value]="brand.name">{{brand.name }} </option>
           </select>
         </div>
 
         <div class="column field">
-          <label for="modeloCarro">Modelo</label>
+          <label for="modeloCarro">Model</label>
           <input type="text" id="modeloCarro" name="modeloCarro" placeholder="Modelo"
             [(ngModel)]="insurance.carModel" />
         </div>
 
         <div class="column field">
-          <label for="placaCarro">Placa</label>
+          <label for="placaCarro">Plate</label>
           <input type="text" id="placaCarro" name="placaCarro" placeholder="Placa" [(ngModel)]="insurance.carPlate" />
         </div>
 
       </div>
 
       <!-- DADOS DO PROPRIETÁRIO-->
-      <h3 class="title">Dados do Proprietário</h3>
+      <h3 class="title">Owner data</h3>
       <div class="three column row">
         <div class="column field">
-          <label for="nomeProprietario">Nome</label>
+          <label for="nomeProprietario">Name</label>
           <input type="text" id="nomeProprietario" name="nomeProprietario" placeholder="Nome"
-            [(ngModel)]="insurance.ownerName" />
-        </div>       
+            [(ngModel)]="insurance.carOwnerName" />
+        </div>
       </div>
 
     </div>
   </div>
   <div class="extra content">
     <div class="row">
-      <button class="ui positive right floated button" (click)="adicionar()">Salvar</button>
+      <button class="ui positive right floated button" (click)="save()">Save</button>
     </div>
     <div class="row notification-button-section">
-      <button class="ui button" (click)="enviarNotificacao()">Enviar notificação</button>
+      <button class="ui button" (click)="enviarNotificacao()">Push notification</button>
     </div>
   </div>
 </div>
+
+<!--Templates-->
+<ng-template #loadingDrop>
+  <input class="ui fluid search selection dropdown" type="text" placeholder="carregando...">
+</ng-template>
