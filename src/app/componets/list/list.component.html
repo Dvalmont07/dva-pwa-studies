@@ -5,14 +5,14 @@
   <div class="content">
     <ng-container *ngIf="insurances$ | async as insurances; else loading">
       <ng-container *ngIf="insurances.length > 0; else noInsurance">
-        <div *ngFor="let insurance of insurances" class="claim-row">
+        <div *ngFor="let insurance of insurances" class="claim-row line border-bottom margin-bottom-2">
           <div>
             <strong>Brand and model: </strong>{{ insurance.carBrand.name }} - {{ insurance.carModel }}
           </div>
           <div>
             <strong>Car plate: </strong>{{insurance.carPlate}}
           </div>
-          <div class="border-bottom mb-5">
+          <div style="margin-bottom: 0.25rem;">
             <strong>Proprietário: </strong>{{ insurance.carOwnerName }}
           </div>
         </div>

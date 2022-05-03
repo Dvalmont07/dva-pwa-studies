@@ -1,7 +1,7 @@
 exports.INSURANCES = [];
 exports.CARBRANDS = [{
     code: "DVA7700",
-    name: "Mustang"
+    name: "MustangooOO"
   },
   {
     code: "CID123",
@@ -16,7 +16,19 @@ exports.CARBRANDS = [{
     name: "Volvo"
   },
   {
-    code: "moon",
-    name: "Wolks"
+    code: "Moon",
+    name: "WolksXh"
   },
+  {
+    code: "Xooxo",
+    name: "FiatoJ"
+  },
+  {
+    code: "Civicx",
+    name: "Hondax"
+  },
+  {
+    code: "PatrieveD",
+    name: "PitaSG"
+  }
 ]

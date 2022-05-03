@@ -29,7 +29,19 @@
   "dataGroups": [{
       "name": "car-api",
       "urls": [
-        "https://www.carqueryapi.com/api/0.3/"
+        "http://localhost:9000/api/insurances"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 10000,
+        "maxAge": "5s",
+        "timeout": "5s"
+      }
+    },
+    {
+      "name": "car-brands",
+      "urls": [
+        "http://localhost:9000/api/carBrands"
       ],
       "cacheConfig": {
         "strategy": "performance",
@@ -39,9 +51,6 @@
       }
 
     }
-
-
-
   ]
 
 }

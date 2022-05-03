@@ -4,6 +4,11 @@
 .title{
     margin: 20px 0 -5px 0;
 }
-.border-bottom{
-    border-bottom: 1px solid #cccccc;
+.line {
+    /* margin-bottom: 1rem; */
+    /* padding: 10px 0px 10px 0px; */
 }
+.margin-bottom-2{
+margin-bottom: 1rem;
+}
+

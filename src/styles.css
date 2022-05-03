@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+html, body{
+    font-size: 13px;
+}
+.border-bottom{
+    border-bottom: 1px solid #cccccc;
+}
