@@ -6,16 +6,18 @@
     <div class="ui large form equal width stackable grid">
 
       <!-- DADOS DO CARRO -->
-      <h3 class="title">Car data</h3> 
+      <h3 class="title">Car data</h3>
 
       <div class="three column row">
 
         <div class="column field">
           <label for="carroModel">Brand</label>
-          <select *ngIf="carsBrands.length > 0; else loadingDrop" title="search"
-            class="ui fluid search selection dropdown" [(ngModel)]="insurance.carBrand.name">
-            <option *ngFor="let brand of carsBrands" class="item" [value]="brand.name">{{brand.name }} </option>
-          </select>
+          <ng-container *ngIf="carsBrands$ | async as carsBrands; else loadingDrop "> 
+            <select *ngIf="carsBrands.length > 0" title="search" class="ui fluid search selection dropdown"
+              [(ngModel)]="insurance.carBrand.name">
+              <option *ngFor="let brand of carsBrands" class="item" [value]="brand.name">{{brand.name }} </option>
+            </select>
+          </ng-container>
         </div>
 
         <div class="column field">

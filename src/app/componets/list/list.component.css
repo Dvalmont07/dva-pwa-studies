@@ -4,3 +4,6 @@
 .title{
     margin: 20px 0 -5px 0;
 }
+.border-bottom{
+    border-bottom: 1px solid #cccccc;
+}
