@@ -18,12 +18,10 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   public insurance: CarInsurance = new CarInsurance();
-  public carsBrands: CarBrand[] = [];
+  public carsBrands$: Observable<CarBrand[]> | undefined;
 
   ngOnInit(): void {
-    this.carBrandService.getBrands().then((response) => {
-      this.carsBrands = response;
-    })
+    this.carsBrands$ = this.carBrandService.get();
   }
 
   public save() {
