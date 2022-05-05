@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   }
 
   public save() {
-    this.carInsuranceService.register(this.insurance);
+    this.carInsuranceService.save(this.insurance);
    }
   public enviarNotificacao() { }
 }
