@@ -29,24 +29,24 @@
   "dataGroups": [{
       "name": "car-api",
       "urls": [
-        "http://localhost:9000/api/insurances"
+        "http://localhost:9000/api/insurances/"
       ],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 10000,
-        "maxAge": "5s",
+        "maxAge": "5m",
         "timeout": "5s"
       }
     },
     {
       "name": "car-brands",
       "urls": [
-        "http://localhost:9000/api/carBrands"
+        "http://localhost:9000/api/carBrands/"
       ],
       "cacheConfig": {
         "strategy": "performance",
         "maxSize": 10000,
-        "maxAge": "10h",
+        "maxAge": "5h",
         "timeout": "5s"
       }
 

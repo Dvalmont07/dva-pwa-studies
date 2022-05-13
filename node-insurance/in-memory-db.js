@@ -5,10 +5,10 @@ exports.CARBRANDS = [{
   },
   {
     code: "CID123",
-    name: "Ferrari"
+    name: "Ferrarix"
   },
   {
-    code: "HEL4567",
+    code: "HEL4567", 
     name: "Subaru"
   },
   {
